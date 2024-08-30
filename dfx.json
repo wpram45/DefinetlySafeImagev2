@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "DefinetlySafeImagev2_backend": {
+      "main": "src/DefinetlySafeImagev2_backend/main.mo",
+      "type": "motoko"
+    },
+    "DefinetlySafeImagev2_frontend": {
+      "dependencies": [
+        "DefinetlySafeImagev2_backend"
+      ],
+      "source": [
+        "src/DefinetlySafeImagev2_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "DefinetlySafeImagev2_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
