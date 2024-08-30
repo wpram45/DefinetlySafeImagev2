@@ -1,5 +1,11 @@
 {
+  
+
   "canisters": {
+    "internet-identity" : {
+      "type": "pull",
+      "id": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+  },
     "DefinetlySafeImagev2_backend": {
       "main": "src/DefinetlySafeImagev2_backend/main.mo",
       "type": "motoko"
