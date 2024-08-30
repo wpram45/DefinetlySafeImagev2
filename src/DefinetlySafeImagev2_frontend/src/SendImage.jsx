@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Principal } from '@dfinity/principal';
 import { DefinetlySafeImagev2_backend } from 'declarations/DefinetlySafeImagev2_backend';
-
+import "./styles/sendImage.css"
 function SendImage({ principalId }) {
   const [imageFile, setImageFile] = useState(null);
   const [imageReceiverId, setImageReceiverId] = useState('');
@@ -52,41 +52,54 @@ function SendImage({ principalId }) {
 
   return (
     <form action="#" onSubmit={(e) => e.preventDefault()}>
+
+<div style={{ display: 'flex', height: '100vh',flexDirection:"column" }}>
+        <div className='innerContainer'>
       <label htmlFor="receiverId">Receiver ID: &nbsp;</label>
       <input
+           className='generalInput'
         id="receiverId"
         type="text"
         value={imageReceiverId}
         onChange={(e) => setImageReceiverId(e.target.value)}
       />
-      <br />
+     </div>
+     <div className='innerContainer'>
       <label htmlFor="image">Choose an image: &nbsp;</label>
-      <input id="image" type="file" accept="image/*" onChange={handleImageChange} />
-      <br />
+      <input      className='generalInput' id="image" type="file" accept="image/*" onChange={handleImageChange} />
+   
+      </div>
+      <div className='innerContainer'>
       <label>
         <input
+        
           type="checkbox"
           checked={isLocked}
           onChange={() => setIsLocked(!isLocked)}
         />
         Lock Image
       </label>
+      </div>
       {isLocked && (
-        <>
-          <br />
+        
+          <div style={{ display: 'flex',flexDirection:"row",flexWrap:"column" ,marginTop:"15px"}}>
           <label htmlFor="password">Password: &nbsp;</label>
+          <br/>
           <input
+          className='generalInput'
             id="password"
             type="password"
             value={passwordHash}
             onChange={(e) => setPasswordHash(e.target.value)}
           />
-        </>
+          </div>
+    
       )}
       <br />
-      <button type="button" onClick={handleSendImage}>
+      <button className='sendImgBtn' type="button" onClick={handleSendImage}>
         Send Image
       </button>
+      </div>
     </form>
   );
 }

@@ -3,7 +3,9 @@ import { AuthClient } from '@dfinity/auth-client';
 import { Principal } from '@dfinity/principal';
 import SendImage from './SendImage';
 import ReceiveImage from './ReceiveImage';
+import Header from './Header';
 
+import   "./styles/app.css"
 function App() {
   const [principalId, setPrincipalId] = useState('');
   const [loggedIn, setLoggedIn] = useState(false);
@@ -54,9 +56,11 @@ function App() {
   }
 
   return (
-    <div style={{ display: 'flex', height: '100vh' }}>
+    <div style={{ display: 'flex', height: '100vh',flexDirection:"column" }}>
+      <Header/>
+      <div style={{ display: 'flex', height: '100vh',flexDirection:"row" ,marginTop:"25px",borderWidth:"2px",borderColor:"white",borderStyle:"solid",flexWrap:"nowrap"}}>
       <div style={{ flex: 1, padding: '20px', borderRight: '1px solid #ddd', display: 'flex', flexDirection: 'column' }}>
-        <div style={{ marginBottom: '20px' }}>
+        <div style={{position:"absolute" ,top:"20px",left:"25vw",fontSize:"1.2vw"}}>
           {loggedIn && (
             <div>
               <strong>Your Internet Identity:</strong> {principalId}
@@ -64,10 +68,11 @@ function App() {
           )}
         </div>
         <h2>Send Image</h2>
+        <hr style={{width:"200%",marginBottom:"30px",margin:"auto"}}/>
         {!loggedIn ? (
           <div>
             <h3>Please log in to use the app</h3>
-            <button onClick={handleLogin}>Login with Internet Identity</button>
+            <button className='loginBtn' onClick={handleLogin}>Login with Internet Identity</button>
           </div>
         ) : (
           <SendImage principalId={principalId} />
@@ -76,6 +81,7 @@ function App() {
       <div style={{ flex: 1, padding: '20px' }}>
         <h2>My Gallery</h2>
         {loggedIn ? <ReceiveImage principalId={principalId} /> : <p>Please log in to view images.</p>}
+      </div>
       </div>
     </div>
   );
