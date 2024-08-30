@@ -32,7 +32,7 @@ function ReceiveImage({ principalId }) {
 
   const handleUnlockImage = async (imageId,indexGallery) => {
 
-    const enteredPassword = prompt('Enter password for locked image:');
+    const enteredPassword = prompt('Enter password for locked image :');
     if (enteredPassword) {
       try {
         const imageBlob = await DefinetlySafeImagev2_backend.receiveImage(
