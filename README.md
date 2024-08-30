@@ -1,6 +1,6 @@
 # `DefinetlySafeImagev2`
 
-Copy code
+
 # Definitely Safe Image Project
 
 ## Overview
