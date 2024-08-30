@@ -1,5 +1,9 @@
 # `DefinetlySafeImagev2`
 
+
+*** To test the project you can use your own internet identity after you logged in as receiver id and just refresh the page images that you have on the blockchain for unlock you must click related image and should enter the same password by sending image thanks ***
+
+
 Welcome to your new `DefinetlySafeImagev2` project and to the Internet Computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
 
 To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
