@@ -1,89 +1,48 @@
-# `DefinetlySafeImagev2`
+# SecureImageChain
+
+Welcome to the official repository of **SecureImageChain**! Our innovative blockchain project empowers users to securely transfer and share images while maintaining complete privacy. Additionally, users can earn **DFileX (DFX)** tokens through engagement on the platform.
+
+## About SecureImageChain
+
+SecureImageChain is a decentralized and secure image-sharing platform built on the **ICP (Internet Computer Protocol)** blockchain. The platform ensures complete privacy and anonymity while enabling seamless and transparent file transfers. Whether you want to share personal or business images securely, SecureImageChain offers a cutting-edge solution.
+
+### Key Features
+
+- **Blockchain Privacy:** Secure and anonymous image sharing with advanced encryption.
+- **File Transfer on Blockchain:** Seamlessly transfer images using the decentralized blockchain network.
+- **Password-Locked Images:** Lock your images with a password for enhanced privacy.
+- **Earn DFX Tokens:** Get rewarded with **DFileX (DFX)** tokens for participating in the network.
+- **Fully Decentralized:** All data and transactions are recorded on the blockchain for maximum transparency.
+
+## How to Get Started
+
+1. Visit [SecureImageChain](https://secureimagechain.com) and log in using **Internet Identity**.
+2. Upload your images securely.
+3. Lock images with a password if needed.
+4. Earn **DFileX (DFX)** tokens as you share and engage on the platform.
+
+## Community and Support
+
+Join our growing community for updates and discussions:
+
+- **Twitter:** [SecureChainDFX](https://x.com/SecureChainDFX)
+- **OpenChat Community:** Join our community with  : https://oc.app/community/r3h3a-kiaaa-aaaac-ach2q-cai/channel/2244035270/?ref=bisdo-eqaaa-aaaar-bnora-cai  **1000+ members**.
+
+## Why SecureImageChain?
+
+- **Privacy & Security:** Ensure your images remain private and protected.
+- **Reward Mechanism:** Earn DFX tokens for participating.
+- **Blockchain Innovation:** Embrace the power of decentralization.
+
+## Contributing
+
+We welcome contributions! Feel free to open issues and submit pull requests.
+
+## License
+
+This project is licensed under the **MIT License**.
 
 
-# Definitely Safe Image Project
 
-## Overview
+##  Discover the future of secure image sharing and blockchain file transfer with [SecureImageChain](https://secureimagechain.com).
 
-Welcome to the **Definitely Safe Image Project**! This project is built on the decentralized blockchain technology provided by ICP (Internet Computer Protocol) and Dfinity. The name of the project reflects its core principles and technological foundation.
-
-## Project Name Explanation
-
-The name **"Definitely Safe Image Project"** derives from a combination of two key elements:
-
-- **"Definitely"**: The term "Definitely" in the project name is inspired by "DeFi," which stands for Decentralized Finance. This reflects the project's commitment to leveraging decentralized technologies for enhanced security and transparency.
-
-- **"Safe Image"**: This part of the name emphasizes the focus on ensuring the safety and security of images within the decentralized ecosystem. Our project aims to provide a robust solution for securely handling images on the blockchain.
-
-## What is ICP and Dfinity?
-
-- **ICP (Internet Computer Protocol)**: ICP is a blockchain protocol that aims to expand the functionality of the internet by creating a decentralized, scalable, and secure environment for various applications and services.
-
-- **Dfinity**: Dfinity is the organization behind ICP, providing the technology and infrastructure needed to support decentralized applications and smart contracts.
-
-## Features
-
-- **Decentralized Storage**: Images are stored securely on the ICP blockchain, ensuring their integrity and availability.
-- **Enhanced Security**: Leveraging the decentralized nature of ICP to provide robust protection against unauthorized access and tampering.
-- **Transparency**: Transactions and interactions with images are recorded on the blockchain, providing full transparency.
-
-- **Testing**: To test the project you can use your own internet identity after you logged in as receiver id and just refresh the page images that you have on the blockchain for unlock you must click related image and should enter the same password by sending image thanks ***
-
-
-Welcome to your new `DefinetlySafeImagev2` project and to the Internet Computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
-
-To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
-
-To learn more before you start working with `DefinetlySafeImagev2`, see the following documentation available online:
-
-- [Quick Start](https://internetcomputer.org/docs/current/developer-docs/setup/deploy-locally)
-- [SDK Developer Tools](https://internetcomputer.org/docs/current/developer-docs/setup/install)
-- [Motoko Programming Language Guide](https://internetcomputer.org/docs/current/motoko/main/motoko)
-- [Motoko Language Quick Reference](https://internetcomputer.org/docs/current/motoko/main/language-manual)
-
-If you want to start working on your project right away, you might want to try the following commands:
-
-```bash
-cd DefinetlySafeImagev2/
-dfx help
-dfx canister --help
-```
-
-## Running the project locally
-
-If you want to test your project locally, you can use the following commands:
-
-```bash
-# Starts the replica, running in the background
-dfx start --background
-
-# Deploys your canisters to the replica and generates your candid interface
-dfx deploy
-```
-
-Once the job completes, your application will be available at `http://localhost:4943?canisterId={asset_canister_id}`.
-
-If you have made changes to your backend canister, you can generate a new candid interface with
-
-```bash
-npm run generate
-```
-
-at any time. This is recommended before starting the frontend development server, and will be run automatically any time you run `dfx deploy`.
-
-If you are making frontend changes, you can start a development server with
-
-```bash
-npm start
-```
-
-Which will start a server at `http://localhost:8080`, proxying API requests to the replica at port 4943.
-
-### Note on frontend environment variables
-
-If you are hosting frontend code somewhere without using DFX, you may need to make one of the following adjustments to ensure your project does not fetch the root key in production:
-
-- set`DFX_NETWORK` to `ic` if you are using Webpack
-- use your own preferred method to replace `process.env.DFX_NETWORK` in the autogenerated declarations
-  - Setting `canisters -> {asset_canister_id} -> declarations -> env_override to a string` in `dfx.json` will replace `process.env.DFX_NETWORK` with the string in the autogenerated declarations
-- Write your own `createActor` constructor
